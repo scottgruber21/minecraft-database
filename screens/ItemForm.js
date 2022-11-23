@@ -142,7 +142,7 @@ const ItemForm = ({navigation, route}) => {
           />
         </View>
         {/* <Button title="Submit" onPress={handleSubmit} /> */}
-        <CustomButton onPress={handleSubmit} color={'green'}>Submit</CustomButton>
+        <CustomButton onPress={handleSubmit} color={'#477a1e'}>Submit</CustomButton>
         <AwesomeAlert
         {...alertStyles}
           show={showAlert}

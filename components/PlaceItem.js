@@ -166,7 +166,7 @@ const alertStyles = {
     borderRadius: 20
   },
   cancelButtonStyle: {
-    backgroundColor: 'green',
+    backgroundColor: '#477a1e',
     paddingVertical: 10,
     paddingHorizontal: 20
   },

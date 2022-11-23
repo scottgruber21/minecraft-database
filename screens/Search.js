@@ -122,8 +122,8 @@ const Search = ({navigation}) => {
           />
         </View>
         <View style={styles.columnsButtons}>
-          <CustomButton onPress={handleSearch} color='green'>Search</CustomButton>
-          <CustomButton onPress={handleClear} color='red'>Clear All</CustomButton>
+          <CustomButton onPress={handleSearch} color='#477a1e'>Search</CustomButton>
+          <CustomButton onPress={handleClear} color='#B22222'>Clear All</CustomButton>
         </View>
         <AwesomeAlert
         {...alertStyles}
