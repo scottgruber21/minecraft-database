@@ -12,6 +12,7 @@ import Admin from './screens/Admin';
 import { init, fetchAll, dropTable } from './utils/database';
 import { useGlobalContext } from './context/GlobalContext';
 import {useFonts} from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,9 @@ function Root() {
 
 export default function App(){
 
+  SplashScreen.preventAutoHideAsync()
+  setTimeout(SplashScreen.hideAsync, 1000)
+
   const [fontsLoaded] = useFonts({
     'orbitronBold': require('./assets/fonts/Orbitron-Bold.ttf'),
     'orbitron': require('./assets/fonts/Orbitron-Regular.ttf'),
@@ -62,7 +66,7 @@ export default function App(){
   });
 
   if(!fontsLoaded){
-    return <View><Text>LOADING...</Text></View>
+    return null
   }
 
 

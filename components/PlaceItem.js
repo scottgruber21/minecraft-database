@@ -64,9 +64,10 @@ const PlaceItem = ({placeData}) => {
         </View>
         <View style={styles.spacer}></View>
         <AwesomeAlert
+        {...alertStyles}
           show={warning}
           showProgress={false}
-          title="Are You sure?"
+          title="Are You Sure?"
           message="This item will be deleted"
           closeOnTouchOutside={true}
           closeOnHardwareBackPress={false}
@@ -149,5 +150,39 @@ const styles = StyleSheet.create({
       marginTop: 20
     }
 })
+
+const alertStyles = {
+  titleStyle: {
+    fontSize: 22,
+    fontFamily: 'orbitronBold'
+  },
+  messageStyle:{
+    width: '80%',
+    lineHeight: 26,
+    fontSize: 18,
+    fontFamily: 'orbitron'
+  },
+  contentContainerStyle: {
+    borderRadius: 20
+  },
+  cancelButtonStyle: {
+    backgroundColor: 'green',
+    paddingVertical: 10,
+    paddingHorizontal: 20
+  },
+  cancelButtonTextStyle: {
+    fontSize: 18,
+    fontFamily: 'orbitron'
+  },
+  confirmButtonStyle: {
+    backgroundColor: '#B22222',
+    paddingVertical: 10,
+    paddingHorizontal: 20
+  },
+  confirmButtonTextStyle: {
+    fontSize: 18,
+    fontFamily: 'orbitron'
+  }
+}
 
 export default PlaceItem
